@@ -19,6 +19,7 @@
   </head>
 
   <body>
+    <!-- Header -->
     <header class="header">
       <a href="#home" class="logo"> Kateryna <span>Pobelianska</span> </a>
 
@@ -33,7 +34,7 @@
         <a href="#contact">Kontakt</a>
       </nav>
     </header>
-
+    <!-- Section Home -->
     <section class="home" id="home">
       <div class="home-rectangle"></div>
       <div class="home-content">
@@ -46,18 +47,58 @@
           Ergebnisse zu liefern und zum Wachstum des Unternehmens beizutragen.
         </p>
         <div class="social-icons">
-          <a href="#"><i class="bx bxs-home-smile"></i></a>
-          <a href="#"><i class="bx bxs-envelope"></i></a>
-          <a href="#"><i class="bx bxs-phone"></i></a>
-          <a href="#"><i class="bx bxl-github"></i></a>
+          <a href="#" id="openModalCountry"><i class="bx bxs-home-smile"></i></a>
+          <a href="mailto:your_email@example.com"><i class="bx bxs-envelope"></i></a>
+          <a href="#" id="openModalPhone"><i class="bx bxs-phone"></i></a>
+          <a href="https://github.com/KatiaPobelianska" target="_blank"><i class="bx bxl-github"></i></a>
         </div>
-        <a href="#" class="btn">Herunterladen CV</a>
+
+
+        <!-- Download doc -->
+        <a
+          href="/doc/Lebenslauf_Kateryna_Pobelianska.pdf"
+          class="btn"
+          download="CV_von_KaterynaPobelianska.pdf"
+          id="download-btn"
+        >
+          Herunterladen CV</a
+        >
       </div>
       <div class="home-img">
-        <img src="assets/KP.jpg" alt="" />
+        <img src="assets/KP.jpg" alt="Foto" />
+      </div>
+
+      <div id="modal-country" class="modal">
+        <div class="modal-content">
+          <button class="close-btn">
+            <img src="./assets/close-icon.png" alt="close" />
+          </button>
+          <div class="img-text-item">
+            <img src="./assets/g-counry.png" alt="img" />
+            <div class="text-item">
+              <h1>Deutschland</h1>
+              <p>Niestetal str. 44a</p>
+              <p>44a, 34266 Niestetal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-phone" class="modal">
+        <div class="modal-content">
+          <button class="close-btn">
+            <img src="./assets/close-icon.png" alt="close" />
+          </button>
+          <div class="text-item">
+            <span>Deutschland</span>
+            <h2><a href="tel:+4915127038667">Tel: +49 1512 70 38 667</a></h2>
+            <p>Unter dieser Handynummer bin ich erreichbar :)</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Section About -->
     <section class="about" id="about">
       <div class="about-rectangle"></div>
       <div class="about-img">
@@ -69,28 +110,94 @@
           <span></span>
         </h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur,
-          sit.
+          Ich bin eine vielseitige Person, die verschiedene Talente und
+          Fähigkeiten gut kombiniert. Sport ist ein wichtiger Teil meines
+          Lebens, da ich sowohl körperlich als auch geistig fit bleiben möchte.
+          Besonders interessiere ich mich für die kontinuierliche
+          Weiterentwicklung, vor allem im Bereich der Informationstechnologie,
+          wo ich immer nach neuen Herausforderungen suche.
         </p>
-        <a href="#" class="btn">Mehr lesen</a>
+        <a href="#" class="btn" id="about-modal-trigger">Mehr lesen</a>
       </div>
     </section>
 
+    <div class="about-modal" id="about-modal">
+      <div class="about-modal-content">
+        <button class="about-modal-close" id="about-modal-close">
+          <img class="about-close" src="./assets/close-icon.png" alt="close" />
+        </button>
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab" data-target="tab1">
+              Ein hohes Maß an Empathie hilft mir, die Bedürfnisse ...
+            </button>
+            <button class="tab" data-target="tab2">
+              Durch meine Arbeit mit Kindern an der Grundschule ...
+            </button>
+            <button class="tab" data-target="tab3">
+              Ich möchte durch meine Arbeit einen positiven ...
+            </button>
+            <button class="tab" data-target="tab4">
+              Ich bin überzeugt, dass meine Fähigkeiten ...
+            </button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane" id="tab1">
+              <p>
+                Ein hohes Maß an Empathie hilft mir, die Bedürfnisse und Gefühle
+                anderer Menschen zu verstehen. Teamarbeit ist für mich sehr
+                wichtig, ebenso wie das soziale Umfeld, in dem ich lebe. Ich bin
+                überzeugt, dass man gemeinsam die besten Ergebnisse erreicht,
+                und das motiviert mich jeden Tag.
+              </p>
+            </div>
+            <div class="tab-pane" id="tab2">
+              <p>
+                Durch meine Arbeit mit Kindern an der Grundschule in Nieste
+                unter der Leitung von Frau Holzhauer und meine Erfahrung in der
+                Betreuung älterer und kranker Menschen habe ich gelernt, wie
+                wichtig der Beitrag eines einzelnen Menschen sein kann, um
+                anderen zu helfen.
+              </p>
+            </div>
+            <div class="tab-pane" id="tab3">
+              <p>
+                Ich möchte durch meine Arbeit einen positiven Beitrag zur
+                Gesellschaft leisten und Projekte unterstützen, die das Leben
+                der Menschen verbessern. Es ist mir wichtig, Teil eines Teams zu
+                sein, das mit Leidenschaft und Innovationsgeist an einer
+                besseren Zukunft arbeitet.
+              </p>
+            </div>
+            <div class="tab-pane" id="tab4">
+              <p>
+                Ich bin überzeugt, dass meine Fähigkeiten, meine Motivation und
+                mein Engagement für jedes Unternehmen wertvoll sind, das nach
+                einer vielseitigen und engagierten Mitarbeiterin sucht.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Ausbildung -->
     <section class="services" id="services">
       <h2 class="heading">Ausbildung</h2>
 
       <div class="service-container">
-        <div class="services-box">
+        <div class="services-box" id="card-1">
           <i class="bx bx-code-block"></i>
           <h3>Frontend Web Development</h3>
           <p>
             Kiewer IT Schule GoIT, erworbene Programmierkentnisse: HTML, CSS und
             Javascript
           </p>
-          <a href="#" class="btn">Mehr lesen</a>
+          <a href="#" class="btn" data-modal="modal-car-1">Mehr lesen</a>
         </div>
 
-        <div class="services-box">
+        <div class="services-box" id="card-2">
           <i class="bx bxl-java"></i>
           <h3>Backend Web Development</h3>
           <p>
@@ -98,21 +205,139 @@
             SQL/MongoBD, Git bash, Data Structures and Algorithms, Linux,
             Dooker, Spring, Hibernate
           </p>
-          <a href="#" class="btn">Mehr lesen</a>
+          <a href="#" class="btn" data-modal="modal-car-2">Mehr lesen</a>
         </div>
 
-        <div class="services-box">
+        <div class="services-box" id="card-3">
           <i class="bx bxs-school"></i>
           <h3>Drohobytscher Pädagogische Universität</h3>
           <p>
             2000-2004 Studium • Bakkalaureus / 2009-2010 • Spezialist Abschluss
             • Deutschlehrer
           </p>
-          <a href="#" class="btn">Mehr lesen</a>
+          <a href="#" class="btn" data-modal="modal-car-3">Mehr lesen</a>
         </div>
       </div>
     </section>
 
+    <!-- Modal Card -->
+
+    <div class="card-modal" id="modal-car-1">
+      <div class="card-modal-content">
+        <button class="card-modal-close">
+          <img src="./assets/close-icon.png" alt="close" />
+        </button>
+        <h2>Frontend Web Development</h2>
+        <p>
+          GO IT ist eine moderne Programmierakademie für alle Interessierten
+          jeden Alters, in der jeder eine qualitativ hochwertige Ausbildung im
+          Bereich IT erhalten kann. <br /><br />
+          Ihr Ziel ist es, das Potenzial jedes Einzelnen zu entfalten, gefragte
+          Programmierfähigkeiten zu vermitteln und die Schüler auf eine
+          erfolgreiche Karriere in der Zukunft vorzubereiten. Mit mehr als
+          10.000 erfolgreichen Absolventen, die in der Programmierbranche eine
+          Anstellung gefunden haben, hat sich GO IT als führende
+          Bildungseinrichtung etabliert. Das Angebot an Kursen ist breit
+          gefächert, sodass jeder den für sich passenden Lehrgang wählen kann.
+          Die Lernplattform ist benutzerfreundlich und ermöglicht den einfachen
+          Zugriff auf alle Kursmaterialien. Es gibt auch Kursangebote auf
+          Englisch, was internationalen Studenten zugutekommt. Darüber hinaus
+          bietet GO IT die Möglichkeit eines institutsbasierten Lernens, um die
+          Ausbildung noch praxisorientierter zu gestalten. Besonders
+          hervorzuheben sind die spezialisierten Kurse für Kinder, die eine
+          frühe Entwicklung von Programmierkenntnissen fördern. Dank dieser
+          Vielfalt an Kursangeboten und der hohen Qualität der Ausbildung zählt
+          GO IT zu einer der besten Schulen in ihrem Bereich. Diese Schule ist
+          eine ausgezeichnete Wahl für diejenigen, die eine erfolgreiche
+          Karriere in der IT-Branche anstreben.
+        </p>
+        <a href="https://goit.global/ua/" target="_blank">goit.global/ua/</a>
+      </div>
+    </div>
+
+    <div class="card-modal" id="modal-car-2">
+      <div class="card-modal-content">
+        <button class="card-modal-close">
+          <img src="./assets/close-icon.png" alt="close" />
+        </button>
+        <h2>Backend Web Development</h2>
+        <p>
+          Tel-Ran ist eine IT-Schule (Berlin, Deutschland), die Absolventen für
+          die am meisten gefragten Berufe in der IT Industrie ausbildet.
+          <br /><br />
+          Ihr Hauptvorteil ist die Anpassung der Lehrpläne an die Bedürfnisse
+          europäischer Unternehmen. Die Belegschaft arbeitet an der
+          Schnittstelle zwischen traditioneller Bildung, Online-Plattformen und
+          Karrierezentren. Von den Plattformen wird Flexibilität und
+          grenzüberschreitende Möglichkeiten sowie der akademische Ansatz von
+          der traditionellen Bildung übernommen. Diese Schule arbeitet in enger
+          Kooperation mit vielen bekannten europäischen Firmen, um
+          sicherzustellen, dass die Ausbildung den Anforderungen des Marktes
+          entspricht. Tel-Ran begleitet seine Schüler in jeder Phase ihrer
+          Ausbildung, vom Lernen bis hin zur Jobsuche und der erfolgreichen
+          Vermittlung. Die Schule legt großen Wert auf die Durchführung von
+          Praktika in Unternehmen, damit die Schüler praktische Erfahrungen
+          sammeln können. Unsere Absolventen sind hochqualifizierte Fachkräfte,
+          die bereit sind, in der Programmierbranche zu arbeiten. Durch die enge
+          Zusammenarbeit mit führenden Firmen ist die Schule in der Lage, ihre
+          Schüler optimal auf die Anforderungen der Industrie vorzubereiten.
+          Jeder Schüler erhält eine persönliche Betreuung und Beratung, um
+          festzulegen, dass er die besten Chancen auf dem Arbeitsmarkt hat.
+          Tel-Ran hat sich als eine der besten Anlaufstellen für eine
+          praxisorientierte und zukunftsorientierte Ausbildung etabliert. Die
+          Absolventen dieser Schule gehören zu den Fachkräften, die die
+          IT-Branche zu bieten hat.
+        </p>
+        <a href="https://tel-ran.de/ru#menuopen" target="_blank"
+          >tel-ran.de/ru#menuopen</a
+        >
+        <a href="./doc/Lehrgang Web Development_Pobelianska.pdf" target="_blank"
+          >Lehrgang Web Development_Pobelianska.pdf</a
+        >
+      </div>
+    </div>
+
+    <div class="card-modal" id="modal-car-3">
+      <div class="card-modal-content">
+        <button class="card-modal-close">
+          <img src="./assets/close-icon.png" alt="close" />
+        </button>
+        <h2>Drohobytscher Pädagogische Universität</h2>
+        <p>
+          Die Drohobytzer Staatliche Pädagogische Universität ist ein modernes,
+          wettbewerbsfähiges Bildungs-, Forschungs- und Kulturzentrum.
+          <br /><br />
+          Die Aktivitäten der Universität tragen zur nachhaltigen innovativen
+          Entwicklung der Region bei. Es ist die einzige pädagogische
+          Universität in der Region Lwiw – 70 % der Lehrer in der Region sind
+          ihre Absolventen. Seit 84 Jahren bleibt die Universität ihrer Berufung
+          treu – hochqualifizierte Fachkräfte im Bildungsbereich auszubilden und
+          an der Spitze der Entwicklung der Hochschulpädagogik zu stehen. Die
+          Universität hat zehntausende Fachkräfte für die Stadt, die Region und
+          das Land ausgebildet, ihre Absolventen arbeiten im Bildungswesen, im
+          Kunstbereich, in Unternehmen und im öffentlichen Dienst. Die
+          Drohobytzer Universität hat eine Reihe von kulturell-aufklärerischen
+          Initiativen in der Stadt ins Leben gerufen. Jedes Jahr wird in
+          Drohobytsch die literarisch-künstlerische Akademie „Krajina Frankiana“
+          veranstaltet, die in Zusammenarbeit der Universität, des Museums
+          „Drohobychyna“, des Theaters und des Stadtrates durchgeführt wird. Das
+          Ziel dieser Akademie ist es, das Werk des Weltliteraten und
+          ukrainischen Schriftstellers Iwan Franko bekannt zu machen und neue
+          Wege zu seiner tieferen Erkenntnis zu eröffnen. Im Jahr 2023 wurde im
+          Gebäude des Universitätsgebäudes der Fakultät für ukrainische und
+          fremdsprachige Philologie, der ehemaligen Franz-Joseph-Gymnasium, in
+          dem der zukünftige ukrainische Genies Iwan Franko im Jahr 1867-1868
+          studierte, das erste Iwan-Franko-Museum-Studio eröffnet. Das
+          Polonistische Zentrum der Universität ist Initiator und Organisator
+          des jährlichen Internationalen Festivals von Bruno Schulz, einem
+          weltberühmten Schriftsteller, der in Drohobytsch lebte, arbeitete und
+          tragisch ums Leben kam.
+        </p>
+        <a href="https://dspu.edu.ua/" target="_blank">dspu.edu.ua</a>
+      </div>
+    </div>
+
+    <!-- Section Projects -->
     <section class="projects" id="projects">
       <h2 class="heading">IT Projekte</h2>
 
@@ -122,7 +347,7 @@
           <div class="projects-info">
             <h4>Frontend Web Development HTML/CSS</h4>
             <p>Team Projekt Kiewer IT Schule GoIT - Adaptives Layout</p>
-            <a href="#"><i class="bx bx-link"></i></a>
+            <a href="https://dmitrysdevfs.github.io/hell-en-project/" target="_blank"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
@@ -131,7 +356,7 @@
           <div class="projects-info">
             <h4>Frontend Web Development Javascript</h4>
             <p>Implementierung der Bildersuche mit Javascript</p>
-            <a href="#"><i class="bx bx-link"></i></a>
+            <a href="https://katiapobelianska.github.io/goit-js-hw-11/" target="_blank"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
@@ -140,13 +365,16 @@
           <div class="projects-info">
             <h4>Backend Web Development Java/SQL/Spring</h4>
             <p>
-               Final Projekt: Ein funktionaler Service für Bilder mit einem optimierten Backend für das Hochladen, Speichern und Bewerten
+              Final Projekt: Ein funktionaler Service für Bilder mit einem
+              optimierten Backend für das Hochladen, Speichern und Bewerten
             </p>
-            <a href="#"><i class="bx bx-link"></i></a>
+            <a href="https://github.com/KatiaPobelianska/goit-js-hw-11" target="_blank"><i class="bx bx-link"></i></a>
           </div>
         </div>
       </div>
     </section>
+
+    <!--Section Skills  -->
 
     <section class="skills" id="skills">
       <h2 class="heading">Skills</h2>
@@ -226,10 +454,11 @@
       </div>
     </section>
 
+    <!-- Section Contact -->
     <section class="contact" id="contact">
       <h2 class="heading">Kontakt zu <span>mir</span></h2>
 
-      <form action="#">
+      <form id="contact-form">
         <div class="input-box">
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="E-Mail" />
@@ -250,14 +479,48 @@
 
         <input type="submit" value="Nachricht senden" class="btn" />
       </form>
+
+       <div id="thank-you" class="thank-you hidden">
+          <img src="./assets/send-email.jpg" alt="Thank You" />
+          <h3>Vielen Dank für Ihre Nachricht!</h3>
+          <p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p>
+        </div>
     </section>
 
+    <!-- Footer -->
+
     <footer class="footer">
+
       <div class="social">
-        <a href="#"><i class="bx bxs-home-smile"></i></a>
-        <a href="#"><i class="bx bxs-envelope"></i></a>
-        <a href="#"><i class="bx bxs-phone"></i></a>
-        <a href="#"><i class="bx bxl-github"></i></a>
+        <a href="#" id="modal_home"><i class="bx bxs-home-smile"></i></a>
+        <a href="mailto:your_email@example.com"><i class="bx bxs-envelope"></i></a>
+        <a href="#" id="modal_phone"><i class="bx bxs-phone"></i></a>
+        <a href="https://github.com/KatiaPobelianska" target="_blank"><i class="bx bxl-github"></i></a>
+      </div>
+
+       <div class="modal-footer" id="modal_home">
+        <div class="modal-content-footer">
+          <button class="modal-close-footer"><img src="./assets/close-icon.png" alt="close"></button>
+          <div class="img-text-item">
+            <img src="./assets/g-counry.png" alt="img">
+            <div class="text-item">
+                <h1>Deutschland</h1>
+                <p>Niestetal str. 44a</p>
+                <p>44a, 34266 Niestetal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer" id="modal_phone">
+        <div class="modal-content-footer">
+          <button class="modal-close-footer"><img src="./assets/close-icon.png" alt="close"></button>
+          <div class="text-item">
+            <span>Deutschland</span>
+            <h2><a href="tel:+4915127038667">Tel: +49 1512 70 38 667</a></h2>
+            <p>Unter dieser Handynummer bin ich erreichbar :)</p>
+          </div>
+        </div>
       </div>
 
       <ul class="list">
@@ -286,6 +549,14 @@
       </p>
     </footer>
 
+    <script src="./js/timer.js"></script>
     <script src="script.js"></script>
+    <script src="./js/modal-footer.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/modal-about.js"></script>
+    <script src="./js/form-hidden.js"></script>
+    <script src="./js/card-modal.js"></script>
+    <script src="./js/dw-doc.js"></script>
   </body>
 </html>
